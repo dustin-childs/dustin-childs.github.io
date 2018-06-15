@@ -1,0 +1,25 @@
+{
+  "name": "Jekyll-AMPS",
+  "version": "1.0.0",
+  "description": "a website boilerplate built with jekyll and AMPS",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp & bundle exec jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danyn/Jekyll-AMPS"
+  },
+  "author": "Daniel Eisen",
+  "license": "Dual License",
+  "bugs": {
+    "url": "https://github.com/danyn/Jekyll-AMPS"
+  },
+  "homepage": "https://github.com/danyn/Jekyll-AMPS/#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.0"
+  }
+}

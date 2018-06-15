@@ -1,0 +1,64 @@
+// home page css declare as css in front matter to incude:
+// _includes/css/home/home.css
+@import "vars"; 
+.home-above-fold{
+
+	#homeHeroImage{
+
+
+		.hero-image{
+		 overflow:hidden;
+		}
+
+		.hero-image--left{
+			position: relative;
+			.guild-event{
+				position:absolute;
+				bottom:0px;
+				width: 50%;
+				margin-left: 31px;
+				margin-bottom: 20px;
+				p{
+					font-weight: 100;
+					color:rgb(194, 194, 194);
+					@media(min-width:600px)and(max-width:887px){
+						font-size:1.5rem;
+					}
+				}
+				a:hover{
+					color:white;
+				}
+				@media(max-width:425px){
+					width:90%;
+					margin-bottom: 2px;
+					p{
+						font-size:.9em;
+					}
+				}
+			}//.guild-event
+		}
+	
+		@media(min-width:888px){
+		max-height: 750px;
+		overflow: hidden;
+		.hero-image{
+			width:50%;
+			float:left;
+			position:relative;	
+		}
+		.hero-image--right{
+			left:50%;
+		}
+		.hero-image--left{
+			right:50%;
+
+		}
+	}
+	
+	}//#homeHeroImage
+
+}// .home-above-fold
+
+.home-page{
+
+}//.home-page

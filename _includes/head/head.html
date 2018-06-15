@@ -1,0 +1,43 @@
+<head>
+	<meta charset="utf-8">
+	<title>{{ site.title }} | {{ site.description }}</title>
+	<link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<style amp-custom>
+		{%- if site.data.global-components -%}
+			{%- for css_include in site.data.global-components.css -%}
+				{%- include {{ css_include }} -%}
+			{%- endfor -%}	
+		{%- endif -%} 
+
+		{%- if page.css -%}
+				{%- include head/css/{{ page.css }} -%}
+		{%- endif -%}
+
+		{%- if page.component_css -%}
+		{%- assign css_includes = page.component_css | split: ', ' -%}
+			{%- for css_include in css_includes -%}
+				{%- include head/css/components/{{ css_include }} -%}
+			{%- endfor -%}	
+		{%- endif -%}
+
+	</style>
+
+	 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	 
+	 <script async src="https://cdn.ampproject.org/v0.js"></script>
+	 
+
+	 {%- include head/amp-elements.html -%}
+	 
+	{%- include head/seo-group.html -%}
+	
+ <!-- feed meta -->
+{%- comment -%}
+	{%- feed_meta -%}
+{%- endcomment -%}
+
+	 {%-if site.shortcut-icon -%}
+		<link rel="icon" type="image/x-icon" href="{{site.favicon}}" /> 
+	 {%- endif -%}
+</head>

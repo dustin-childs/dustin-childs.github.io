@@ -1,0 +1,115 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# https://developers.facebook.com/docs/internationalization#locales
+# OG image is 1200 pixels x 627 pixels (1.91/1 ratio) -> don’t exceed the 5MB size limit.
+#variables
+#repository is required/helps github-pages gem it's a good idea to include
+# need to call api to find it from list of repos
+
+# repository: 131331861
+repository_url: https://github.com/dustin-childs/website
+url: https://dustin-childs.github.io
+# cdn_baseurl: /Dustin-Childs
+# baseurl: /Dustin-Childs
+permalink: /:categories/:title/
+country: CA
+lang: en
+title: Dustin Childs
+description: Dustin is an experienced Canadian musician. You can see him live and when hosting regular open mic events around Victoria, BC.
+# company_name: n/a
+# company_nickname: n/a
+nav: navs/nav-default.html
+sidebar: yes
+logo: /assets/logo.png
+social_image: assets/share_site.jpg
+email: your-email@example.com
+# tel_pretty: n/a
+# tel: n/a
+author: Daniel Eisen
+twitter: false
+# twitter_username: n/a
+# github_username: n/a
+
+
+
+
+header_pages:
+  - index.html
+  - about/about.html
+  - contact/contact.html
+
+
+#define global AMPS components. ie..any components that appear accross all pages
+# amps_components:
+amp-sidebar: yes
+amp-accordion: yes
+# amp-soundcloud: yes
+ 
+
+
+# Information for facebook pixil and marketing functions
+facebook:
+  # admins: n/a
+  # app_id: n/a
+  # publisher: n/a
+  # locale: en_CA 
+# Information for website verification codes often written into the the document head
+webmaster_verifications:
+  # google: 938475394875
+  # bing: n/a
+  # alexa: n/a
+  # yandex: n/a
+  # baidu: n/a
+
+
+
+#schema.org settings which can also be used to reference these values in the site markup and rich snippets
+schema_org:
+  # type: n/a
+  # city: Victoria
+  # province: BC
+  # postalCode: n/a
+  # streetAddress: n/a
+
+
+# Build settings
+debug: no
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - gulpfile.js
+  - package-lock.json
+  - package.json
+  - README.md
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+  - pages/about/about.scss
+  - pages/contact/contact.scss
+  - pages/restorations/restorations.scss
+  - pages/home/home.scss
+  

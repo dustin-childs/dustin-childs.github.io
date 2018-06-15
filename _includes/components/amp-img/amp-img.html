@@ -1,0 +1,35 @@
+<amp-img
+	{% if include.class %}
+	class="{{include.class}}"
+	{% endif %}
+
+	{% if include.media %}
+	media="{{include.media}}"
+	{% endif %}
+
+	alt="{{include.alt}}"
+	width="{{include.width}}"
+	height="{{include.height}}"
+	layout="{{include.layout}}"
+	src="{{site.url}}{%-if site.baseurl-%}{{site.baseurl}}{%-endif-%}{%-if include.path -%}{{include.src}}{%- elsif page.permalink  -%}{{page.permalink}}{{include.src}}{%- elsif page.content-folder-%}{{page.content-folder}}{{include.src}}{%-endif-%}">
+</amp-img>
+
+{% comment %}
+
+include path: /_includes/components/amp-img/amp-img.html
+
+-----------------------------------------------------------
+
+parameters:
+			alt
+			media
+			width
+			height
+			layout
+			src
+
+------------------------------------------------------------
+
+usage: {%- include components/amp-img/amp-img.html class="" path="" src="" alt="" media="" width="" height="" layout=""  -%}
+
+{% endcomment %}

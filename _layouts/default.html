@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ⚡ lang="{{ page.lang | default: site.lang | default: "en" }}" >
+	{%- include head/head.html -%}
+	<body class="{{page.page_css_class}}" > 
+	{%- if site.sidebar -%}
+		{%- include navs/sidebar.html-%}
+	{%- endif -%} 
+		<div class="main-wrapper">
+			<a class="mx-auto block logo-width"  href="{{ "/" | relative_url }}">
+				{%- include components/amp-img/amp-img.html class="main-logo" path="true" src="/assets/logo.png" alt="Jekyll-AMPS" width="352" height="286" layout="fixed"  -%}
+			</a>
+			{%- include header.html -%}
+			<main class="page-content" aria-label="Content">
+			<div class="wrapper">
+				{{ content }}
+			</div>
+			</main>
+			{%- include footer/footer.html -%}
+		</div>
+	</body>
+</html>

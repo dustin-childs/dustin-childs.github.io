@@ -1,0 +1,29 @@
+@import 'vars';
+
+.about-dustin{
+    h3{
+        color:white;
+    }
+    ul{
+        list-style-type: none;
+        padding:0;
+    }
+
+    .about-content{
+        &, .venues{
+        padding-top:30px;
+        }
+        @media(min-width:630px){
+            .one-edge-shadow{
+                display:none;
+            }
+            .venues{
+                padding-top:0;
+            }
+            div{    
+                float:left;
+                width:50%;
+        }
+        }
+    }
+}

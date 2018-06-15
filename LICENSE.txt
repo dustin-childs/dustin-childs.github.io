@@ -1,0 +1,3 @@
+This site has a dual licence.
+All media and content are the exclusive Property of Dustin Hauschild.
+The software that it is built has an MIT licence.

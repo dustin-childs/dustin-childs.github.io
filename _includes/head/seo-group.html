@@ -1,0 +1,114 @@
+<!-- Begin SEO group for social shares and rich search results -->
+
+{%- if site.title -%}
+  <meta property="og:title" content="{{ site.title }}" />
+{%- endif -%}
+
+{%- if site.author -%}
+  <meta name="author" content="{{ site.author}}" />
+{%- endif -%}
+
+{%- if site.country and site.lang-%}
+<meta property="og:locale" content="{{ site.country }}_{{ site.lang }}" />
+{%- endif -%}
+ 
+{%- if site.description -%}
+  <meta name="description" content="{{ site.description }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+{%- endif -%}
+
+{%- if site.url -%}
+  <meta property="og:url" content="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
+{%- endif -%}
+
+{%- if site.company_name -%}
+  <meta property="og:site_name" content="{{ site.company_name }}" />
+{%- endif -%}
+
+
+{%- if page.social_image -%}
+  <meta property="og:image" content="{{ site.url }}{{site.baseurl}}{{ page.social_image }}" />
+{%- elsif site.social_image -%}
+  <meta property="og:image" content="{{ site.url }}{{site.baseurl}}/{{ site.social_image }}" />
+{%- endif -%}
+
+{% comment %}
+The Date assigned to the Post. This can be overridden in a Post’s front matter
+by specifying a new date/time in the format  YYYY-MM-DD HH:MM:SS (assuming UTC),
+or  YYYY-MM-DD HH:MM:SS +/-TTTT (to specify a time zone using an offset from UTC.
+e.g. 2008-12-14 10:30:00 +0900).
+{% endcomment %}
+
+{%- if page.date -%}
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+{%- endif -%}
+
+{%- if paginator.previous_page -%}
+  <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}" />
+{%- endif -%}
+{% if paginator.next_page %}
+  <link rel="next" href="{{ paginator.next_page_path | absolute_url }}" />
+{%- endif -%}
+
+{%- if site.twitter -%}
+  {%- if site.social_image or page.social_image -%}
+    <meta name="twitter:card" content="summary_large_image" />
+  {%- else -%}
+    <meta name="twitter:card" content="summary" />
+  {%- endif -%}
+  {%- if site.twitter_username -%}  
+  <meta name="twitter:site" content="@{{ site.twitter_username | replace:"@","" }}" />
+  <meta name="twitter:creator" content="@{{ site.twitter_username | replace:"@","" }}" />
+  {%- endif -%}
+{%- endif -%}
+
+
+
+{% if site.facebook %}
+  {% if site.facebook.admins %}
+    <meta property="fb:admins" content="{{ site.facebook.admins }}" />
+  {% endif %}
+
+  {% if site.facebook.publisher %}
+    <meta property="article:publisher" content="{{ site.facebook.publisher }}" />
+  {% endif %}
+
+  {% if site.facebook.app_id %}
+    <meta property="fb:app_id" content="{{ site.facebook.app_id }}" />
+  {% endif %}
+{% endif %}
+
+{% if site.webmaster_verifications %}
+  {% if site.webmaster_verifications.google != "" %}
+    <meta name="google-site-verification" content="{{ site.webmaster_verifications.google }}" />
+  {% endif %}
+
+  {% if site.webmaster_verifications.bing != "" %}
+    <meta name="msvalidate.01" content="{{ site.webmaster_verifications.bing }}" />
+  {% endif %}
+
+  {% if site.webmaster_verifications.alexa != "" %}
+    <meta name="alexaVerifyID" content="{{ site.webmaster_verifications.alexa }}" />
+  {% endif %}
+
+  {% if site.webmaster_verifications.yandex != "" %}
+    <meta name="yandex-verification" content="{{ site.webmaster_verifications.yandex }}" />
+  {% endif %}
+
+  {% if site.webmaster_verifications.baidu != "" %}
+    <meta name="baidu-site-verification" content="{{ site.webmaster_verifications.baidu }}" />
+  {% endif %}
+{% endif %}
+
+
+
+<!-- End SEO group -->
+
+<!-- Begin Schema.org description of thing -->
+
+<script type="application/ld+json">
+    {%- include head/schema.liquid -%}
+</script> 
+
+<!-- End Schema.org description of thing -->

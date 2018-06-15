@@ -1,0 +1,18 @@
+# css:
+#   - head/css/basscss.css
+#   - head/css/global.css 
+#   - head/css/navs/nav.css 
+#   - head/css/footer/footer.css  
+#   - head/css/components/buttons/directions/button-directions.css
+
+{
+  "css":[
+      "head/css/basscss.css",
+      "head/css/global.css", 
+      "head/css/navs/nav.css",
+      "head/css/navs/sidebar.css",  
+      "head/css/footer/footer.css",  
+      "head/css/components/buttons/directions/button-directions.css",
+      "head/css/components/buttons/telephone/button-telephone.css"
+  ]
+}

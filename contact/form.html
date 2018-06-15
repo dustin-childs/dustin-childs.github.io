@@ -1,0 +1,54 @@
+<div class="form-wrapper">
+    <div class="response-message">
+            <div class="form-heading">
+                <h2 class="form_title">Get In Touch With Us</h2>
+                <span class="form_description"></span>
+            </div>
+         <div [text]="formResponseText" class="status initial" [class]="formResponseClass"></div>
+    </div>
+    <form
+        on="submit:AMP.setState(
+        {
+            formResponseText: 'Thanks for getting in touch. We will respond shortly.',
+            formResponseClass: 'status success' 
+        })"
+        method="post"
+        action-xhr="https://getsimpleform.com/messages?form_api_token=abac523731b58d63c283659fad638c15"
+        target="_top"
+        class="contact-form"
+        >
+        
+         <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+       
+        <!-- all your input fields here.... -->
+        
+        <div class="contact-name text-fields clearfix">
+            <div class="input-group md-col md-col-6">
+                <input type="text" name="First_Name" id="firstName" value="" aria-label="First name" tabindex="2" aria-invalid="false">
+                <label for="firstName">First</label>
+            </div><!-- first name -->
+    
+            <div class="input-group md-col md-col-6">
+                <input type="text" name="Last_Name" id="lastName" value="" aria-label="Last name" tabindex="4" aria-invalid="false">
+                <label for="lastName">Last</label>
+            </div><!-- last name -->
+        </div><!-- contact-name -->
+    
+        <div class="contact-address text-fields clearfix">
+            <div class="input-group md-col md-col-6">
+                <input type="email" name="Email_Address" id="emailAddress" value="" aria-label="Email address" tabindex="2" aria-invalid="false">
+                <label for="emailAddress">Email address</label>
+            </div><!-- Email address -->
+    
+            <div class="input-group md-col md-col-6">
+                <input type="tel" name="TelephoneNumber" id="telephoneNumber" value="" aria-label="Telephone number" tabindex="4" aria-invalid="false">
+                <label for="telephoneNumber">Telephone number</label>
+            </div><!-- telephone number -->
+        </div><!-- contact-address -->
+      
+      
+        <input type='submit' value='Book Now!' />
+      </form>
+    
+     
+    </div>

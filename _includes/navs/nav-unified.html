@@ -1,0 +1,47 @@
+<a class="mx-auto block logo-width"  href="{{ "/" | relative_url }}">
+    {% include images/site-logo.html %}
+</a>
+
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+
+<div class="ampstart-headerbar">
+    <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div>
+    {%- if page_paths -%}
+    <nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide">
+        <ul  class="list-reset center m0 p0 flex justify-center nowrap">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+              {%- if my_page.in_page_nav -%}
+                {% assign page_navs = my_page.in_page_nav| split: ', ' %}
+                <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
+                    <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown absolute top-0 left-0 right-0 bottom-0">
+                        <section>
+                          <header>{{ my_page.title | escape }}</header>
+                          <ul class="ampstart-dropdown-items list-reset m0 p0">
+               
+                  {% for page_nav in page_navs %}
+                            <li class="ampstart-dropdown-item">
+                              <a href="{{ my_page.url | relative_url }}#{{page_nav}}" class="text-decoration-none"> {{ page_nav | replace: '-', ' '  }}</a>
+                            </li>
+                     
+                  {% endfor %}
+                          </ul>
+                        </section>
+                      </amp-accordion>
+                </li>
+            {%- else -%}
+            <li class="ampstart-nav-item ">
+                <a class="text-decoration-none block" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            </li>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </ul >
+      </nav>
+    {%- endif -%}
+</div>
+{% if site.debug %}
+  <h3>template: nav-unified.html</h3>
+{% endif %}

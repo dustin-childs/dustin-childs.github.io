@@ -1,0 +1,99 @@
+@import 'vars';
+#header-sidebar{
+    
+    width:100vw;
+    color:white;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#680000+26,a54848+100 */
+    background: rgb(104,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(104,0,0,1) 26%, rgba(165,72,72,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(104,0,0,1) 26%,rgba(165,72,72,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(104,0,0,1) 26%,rgba(165,72,72,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#680000', endColorstr='#a54848',GradientType=0 ); /* IE6-9 */
+    .toggle-wrapper{
+        .toggle-sidebar{
+            float:right;
+            font-size: 1.3em;
+            padding: 16px;
+            color:inherit;            
+        }
+    }// .toggle-wrapper
+
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+
+    a, header{
+        display:block;
+        padding:6px;
+        color:inherit;
+        background: transparent;
+        border:none;
+    }
+
+    .sidebar-nav,  .sidebar-info{
+        text-align: left;
+        padding-left: $space-1;
+        color:inherit;
+    }
+
+    .sidebar-dropdown{
+        ul{
+            padding-left:1em;
+        }
+    }// .sidebar-dropdown -> amp-accordians
+
+    .sidebar-social-links{
+        padding:1em;
+        text-align: center;
+        li{
+            display:inline-block;
+        }
+        .icon{
+            fill: white;
+        }
+    }//.sidebar-social-links
+
+    .sidebar-info{ 
+  
+        a{
+            color:inherit;
+        }
+        
+            .btn-tel, .btn-dir {
+                margin: 0 auto;
+                border: 2px solid;
+                width: 284px;
+                font-size: 16px;
+                height:3em;
+                color: #fff;
+                // background: #05a4d4;
+                background: transparent;
+                margin-top: 1em;
+                font-weight: 100;
+                a{
+                    font-weight: 100; 
+                }
+            }
+            .icon-tel{
+                position: relative;
+                top: -10px;
+            
+            }
+            .phone-pretty{
+                top:-25px;
+                padding-left:31px;
+            }
+        
+    }// .sidebar-info
+
+}// #sidebar-nav
+
+.sidebar-trigger {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    background: black;
+    margin: 12px 22px;
+}

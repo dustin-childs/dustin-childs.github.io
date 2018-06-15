@@ -1,0 +1,16 @@
+<header class="site-header" >
+
+    {%- if page.nav -%}
+      {%- include {{page.nav}} -%}
+    {%- elsif site.nav -%}
+      {%- include {{site.nav}}  -%}
+     {%- else -%} 
+      {%- include navs/nav-default.html -%}
+    {%- endif -%}   
+
+</header>
+  
+
+{% if site.debug %}
+  <h3>header.html -- page.nav: {{page.nav}} site.nav: {{site.nav}}</h3>
+{% endif %}

@@ -1,0 +1,54 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+
+<div class="nav-wrapper box-shadow clearfix">
+        <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="sidebar-trigger right">☰</div>
+{%- if page_paths -%}
+        <nav class="main-menu clearfix">
+            <ul>
+              {%- for path in page_paths -%}
+                {% if path.dropdown %}
+                  <li>
+                    <header aria-haspopup="true">{{ path.dropdown | escape }}</header>
+                    <ul class="shadow-x">
+                      {% for dropdownItem in path.dropdownItems %}
+                        {%- assign my_page = site.pages | where: "path", dropdownItem | first -%}
+                        <li class="">
+                            <a href="{{ my_page.url | relative_url }}" class="text-decoration-none">{{ my_page.title | escape }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>    
+                  {% else %}
+                  {%- assign my_page = site.pages | where: "path", path | first -%}
+                  {%- if my_page.title -%}
+                    {%- if my_page.in_page_nav -%}
+                      {% assign page_navs = my_page.in_page_nav| split: ', ' %}
+                      <li>
+                          <header aria-haspopup="true">{{ my_page.title | escape }}</header>
+                          <ul class="shadow-x">
+                        {% for page_nav in page_navs %}
+                            <li>
+                              <a href="{{ my_page.url | relative_url }}#{{page_nav}}"> {{ page_nav | replace: '-', ' '  }}</a>
+                            </li>
+                        {% endfor %}
+                          </ul>
+                      </li>
+                  {%- else -%}
+                  <li>
+                      <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                  </li>
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </ul >
+        </nav>
+{%- endif -%}
+</div><!-- .nav-wraper -->
+
+
+
+{% if site.debug  %}
+  <h3>template: nav-default.html</h3>
+{% endif %}

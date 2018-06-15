@@ -1,0 +1,80 @@
+
+@import 'vars';
+
+.form-wrapper{
+	h1, h2,h3,h4{
+		color:white;
+	}
+	border: 1px solid rgb(236, 236, 236);
+	max-width:900px;
+	padding: $space-2;
+	margin:$space-2 auto;
+
+	.response-message{
+		text-align: center;
+		
+		padding: $space-2;
+		.status{
+			padding: $space-2;
+			color:white;
+			display:inline-block;
+			&.initial{
+				background: transparent;
+			}
+			&.success{
+				background: $light_green;
+			}
+		}
+		
+	}
+
+	.contact-form{
+		
+		.input-group{
+			padding: $space-1;
+		}
+		.text-fields{
+			input{
+				border: 1px solid #d6d1d1;
+				background-color:#f1f0f0;
+				width:100%;
+				margin:0 auto;
+				line-height:2em;
+			}
+			label{
+				display:block;
+			}
+		}
+		
+		.radio-input{
+			label, input{
+				display:inline-block;
+				vertical-align: middle;
+				padding: 3px;
+			}
+			
+		
+		}
+		input[type="submit"]{
+			padding:$space-2;
+			display:block;
+			width:80%;
+			margin:0 auto;
+			text-align: center;
+			color:white;
+			background:$dark_blue;
+			border:none;
+			border-radius: 6px;
+			&:hover{
+				background:$light_blue;
+			}
+
+		}
+	}
+}
+
+.info{;
+	h2{
+		color: white;
+	}
+}

@@ -1,0 +1,18 @@
+// background image may be used see if it is amps compliant
+// https://stackoverflow.com/questions/45760791/can-we-use-images-in-css-background-in-google-amp?rq=1
+// would make sense for psuedo element that do not need responsive images
+/* Basscss Background Images */
+
+.bg-cover   { background-size: cover }
+
+.bg-contain { background-size: contain }
+
+.bg-center  { background-position: center }
+
+.bg-top     { background-position: top }
+
+.bg-right   { background-position: right }
+
+.bg-bottom  { background-position: bottom }
+
+.bg-left    { background-position: left }

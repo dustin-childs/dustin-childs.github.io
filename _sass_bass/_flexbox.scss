@@ -1,0 +1,111 @@
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+// writing mode can be set in two ways
+// with an html attribute dir="rtl"
+// with a css attribute direction:rtl;
+
+// Custom Media Query Variables
+
+$breakpoint-sm: '(min-width: 40em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+
+// REQUIRED CONTAINER PROPERTY
+
+.flex { display: flex }
+
+@media #{$breakpoint-sm} {
+  .sm-flex { display: flex }
+  .sm-flex-reverse{
+    flex-direction: row-reverse;
+  }
+}
+
+@media #{$breakpoint-md} {
+  .md-flex { display: flex }
+  .md-flex-reverse{
+    flex-direction: row-reverse;
+  }
+}
+
+@media #{$breakpoint-lg} {
+  .lg-flex { display: flex }
+  .lg-flex-reverse{
+    flex-direction: row-reverse;
+  }
+}
+
+// CONTAINER PROPERTIES
+// container properties affect all children flex-items 
+
+// FLEX DIRECTION: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+  //  initial -> flex-direction: row; (horizontal)
+  // make the layout vertical
+.flex-column  { flex-direction: column }
+
+// FLEX WRAP: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+  // initial -> flex-wrap: nowrap;
+  // use flex-wrap in order to respect the width of your containers if they are set
+.flex-wrap    { flex-wrap: wrap }
+
+.items-start    { align-items: flex-start }
+
+.items-end      { align-items: flex-end }
+
+.items-center   { align-items: center }
+
+.items-baseline { align-items: baseline }
+
+.items-stretch  { align-items: stretch }
+
+.self-start    { align-self: flex-start }
+
+.self-end      { align-self: flex-end }
+
+.self-center   { align-self: center }
+
+.self-baseline { align-self: baseline }
+
+.self-stretch  { align-self: stretch }
+
+.justify-start   { justify-content: flex-start }
+
+.justify-end     { justify-content: flex-end }
+
+.justify-center  { justify-content: center }
+
+.justify-between { justify-content: space-between }
+
+.justify-around  { justify-content: space-around }
+
+.content-start   { align-content: flex-start }
+
+.content-end     { align-content: flex-end }
+
+.content-center  { align-content: center }
+
+.content-between { align-content: space-between }
+
+.content-around  { align-content: space-around }
+
+.content-stretch { align-content: stretch }
+
+/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
+
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0; /* 1 */
+  min-height: 0; /* 1 */
+}
+
+.flex-none { flex: none }
+
+.order-0 { order: 0 }
+
+.order-1 { order: 1 }
+
+.order-2 { order: 2 }
+
+.order-3 { order: 3 }
+
+.order-last { order: 99999 }

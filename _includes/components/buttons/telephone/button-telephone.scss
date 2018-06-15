@@ -1,0 +1,35 @@
+
+// 1025 is where desktops are said to begin
+@import 'vars';
+.btn-tel{
+    margin-top:1em;         
+    border: 2px solid;
+    border-radius: 3px;
+    width:315px; 
+    font-size: 30px; 
+    color:rgb(255, 255, 255);
+    background: $light_blue;
+
+    a.tel-link{
+        
+        color:inherit;
+        font-size:inherit;
+        .icon-tel{
+            
+            svg{
+                padding-left:12px;
+                width:48px;
+                height:48px;
+                fill: currentColor;
+            }
+        }
+        .phone-pretty{
+            top: -10px;
+            padding-top: 10px;
+            padding-left: 26px;
+            
+        }  
+    }
+}
+
+ 

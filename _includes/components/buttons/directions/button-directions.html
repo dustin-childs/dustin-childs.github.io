@@ -1,0 +1,24 @@
+{% comment %}
+path: _includes/components/buttons/directions/button-directions.html 
+https://developers.google.com/maps/documentation/urls/guide 
+https://developers.google.com/maps/documentation/urls/guide#directions-action 
+https://developers.google.com/places/place-id
+
+{% endcomment %}
+
+{%- capture destination -%}
+{{site.data.location.streetAddress}} {{site.data.location.province}}  
+{%- endcapture -%}
+
+{%- capture parameters -%}
+destination={{ destination | url_encode }}&destination_place_id={{site.data.location.placeId}}
+{%- endcapture -%}
+
+<div class="btn-dir directions-wrapper table">
+    <a class="directions-link table-cell align-middle" target="_blank" href="https://www.google.com/maps/dir/?api=1&{{parameters}}">Get Directions</a>
+</div> 
+
+{% comment %} 
+usage:
+{%- include  components/buttons/directions/button-directions.html  -%}
+{% endcomment %}
