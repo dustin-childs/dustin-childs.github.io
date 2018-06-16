@@ -1,9 +1,16 @@
 
-// https://css-tricks.com/scale-svg/
+
 @import 'vars';
 .site-footer{
     position: relative;
     color:white;
-    background-color:$footer-background;
+    background-color: $footer-background;
+    a{
+        padding:1em;
+    }
+    svg {
+        width: 40px;
+        height: 40px;
+    }
   
 }

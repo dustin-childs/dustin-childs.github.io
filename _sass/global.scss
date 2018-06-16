@@ -4,6 +4,7 @@
 
 // global layout
 *, *:before, *:after{box-sizing: border-box;}
+ul{margin:0;}
 .main-wrapper{
     max-width:1200px;
     margin: 0 auto;
@@ -85,3 +86,16 @@ $a-tags-hover: 'a:active, a:hover';
         font-style:italic;
     }
 }
+
+// global components
+
+.social-links{
+    padding:1em;
+    text-align: center;
+    li{
+        display:inline-block;
+    }
+    .icon{
+        fill: white;
+    }
+}//.sidebar-social-links
