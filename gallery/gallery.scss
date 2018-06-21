@@ -1,6 +1,16 @@
+
+.images{
+    .image{
+        width:90%;
+        margin:0 auto;
+        margin-bottom:1em;
+    }
+}
+@media(min-width:504px){
 .images{
     width:80%;
     margin:0 auto;
+
   .image{
       border:1px solid grey;
       border-radius:3px;
@@ -8,7 +18,12 @@
       min-width:40px;
       overflow:hidden;
       margin-bottom:2%;
+    img:hover{
+        transform:scale(1.02) rotate(-0.2deg);
+        transition: transform 500ms;
+    }
   }
+
 
   .half-width{
       width:49.5%;
@@ -30,4 +45,5 @@
   #img4{}
   #img5{}
   #img6{}
+}
 }
