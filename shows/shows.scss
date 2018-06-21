@@ -1,3 +1,4 @@
+@import 'vars';
 .events{
     .event{
         width:80%;
@@ -5,7 +6,14 @@
         padding:1em;
         border-left:3px solid;
     }
+    .last{
+        margin-bottom:$space-2;
+    }
     a{color:white;
         font-style: italic;
+    }
+    h1,h2,h3,h4{
+        text-align:center;
+        padding:$space-2;
     }
 }

@@ -52,6 +52,7 @@ header_pages:
   - about/about.html
   - contact/contact.html
   - shows/shows.html
+  - gallery/gallery.html
 
 
 #define global AMPS components. ie..any components that appear accross all pages

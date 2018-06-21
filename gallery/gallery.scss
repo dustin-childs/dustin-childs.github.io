@@ -1,0 +1,33 @@
+.images{
+    width:80%;
+    margin:0 auto;
+  .image{
+      border:1px solid grey;
+      border-radius:3px;
+      min-height:40px;
+      min-width:40px;
+      overflow:hidden;
+      margin-bottom:2%;
+  }
+
+  .half-width{
+      width:49.5%;
+    
+      .first{
+          margin-left:1%;
+      }
+  }
+
+  
+
+  .full-width{
+      width:100%;
+    
+  }
+  #img1{}
+  #img2{}
+  #img3{}
+  #img4{}
+  #img5{}
+  #img6{}
+}
