@@ -1,49 +1,36 @@
+//define the smallest screens
+@media (max-width:39.999em){
+		.images{
+				.image{
+						width:100%;
+				}
+		}
+}
 
+//define the gutters and styles across sizes
 .images{
-    .image{
-        width:90%;
-        margin:0 auto;
-        margin-bottom:1em;
-    }
+	width:98%;
+	margin:0 auto;
+	.image{
+			margin-bottom:.5em;
+			border-radius:3px;
+			overflow:hidden;
+			img:hover{
+			transform:scale(1.02) rotate(-0.2deg);
+			transition: transform 500ms;
+			}
+	}
 }
-@media(min-width:504px){
-.images{
-    width:80%;
-    margin:0 auto;
 
-  .image{
-      border:1px solid grey;
-      border-radius:3px;
-      min-height:40px;
-      min-width:40px;
-      overflow:hidden;
-      margin-bottom:2%;
-    img:hover{
-        transform:scale(1.02) rotate(-0.2deg);
-        transition: transform 500ms;
-    }
-  }
+// .images{
+// 	#img1{}
+// 	#img2{}
+// 	#img3{}
+// 	#img4{}
+// 	#img5{}
+// 	#img6{}
+// 	#img7{}
+// 	#img8{}
+// 	#img9{}
 
-
-  .half-width{
-      width:49.5%;
-    
-      .first{
-          margin-left:1%;
-      }
-  }
-
-  
-
-  .full-width{
-      width:100%;
-    
-  }
-  #img1{}
-  #img2{}
-  #img3{}
-  #img4{}
-  #img5{}
-  #img6{}
-}
-}
+// }

@@ -1,0 +1,77 @@
+$gutter:.5%;
+$breakpoint-sm: '(min-width: 40em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+@media #{$breakpoint-sm} {
+  // grid of fifths
+    .sm-col-1-5 {
+      width: (1/5 * 100%-$gutter);
+    }
+  
+    .sm-col-2-5 {
+      width: (2/5 * 100%-$gutter);
+    }
+  
+    .sm-col-3-5 {
+      width: (3/5 * 100%-$gutter);
+    }
+  
+    .sm-col-4-5 {
+      width: (4/5 * 100%-$gutter);
+    }
+
+    .sm-col-5-5 {
+        width: (5/5 * 100%-$gutter);
+      }
+
+
+    .sm-col-1-12 {
+      width: (1/12 * 100%-$gutter);
+    }
+
+    .sm-col-2-12 {
+      width: (2/12 * 100%-$gutter);
+    }
+
+    .sm-col-3-12 {
+      width: (3/12 * 100%-$gutter);
+    }
+
+    .sm-col-4-12 {
+      width: (4/12 * 100%-$gutter);
+    }
+
+    .sm-col-5-12 {
+      width: (5/12 * 100%-$gutter);
+    }
+
+    .sm-col-6-12 {
+      width: (6/12 * 100%-$gutter);
+    }
+
+    .sm-col-7-12 {
+      width: (7/12 * 100%-$gutter);
+    }
+
+    .sm-col-8-12 {
+      width: (8/12 * 100%-$gutter);
+    }
+
+    .sm-col-9-12 {
+      width: (9/12 * 100%-$gutter);
+    }
+
+    .sm-col-10-12 {
+      width: (10/12 * 100%-$gutter);
+    }
+
+    .sm-col-11-12 {
+      width: (11/12 * 100%-$gutter);
+    }
+
+    .sm-col-12-12 {
+      width: 100%-$gutter;
+    }
+}
+
+

@@ -14,22 +14,33 @@ css: gallery/gallery.css
 ---
 
 <div class="images flex flex-wrap justify-between">
-    <div id="img1" class="image full-width">
+    <div id="img1" class="image sm-col-12-12">
         {%- include components/amp-img/amp-img.html class="gallery-image"  src="Market-Square.jpg" alt="Dustin Childs "  width="1065" height="699" layout="responsive"  -%}
     </div>
-    <div id="img2" class="image half-width first">
+    <div id="img2" class="image sm-col-6-12 gutter">
         {%- include components/amp-img/amp-img.html class="gallery-image"  src="Darcys-Westshore-2.jpg" alt="Dustin Childs "  width="500" height="889" layout="responsive"  -%}
     </div>
-    <div id="img3" class="image half-width">
+    <div id="img3" class="image sm-col-6-12">
         {%- include components/amp-img/amp-img.html class="gallery-image"  src="Craig-Smart.jpg" alt="Dustin Childs "  width="500" height="889" layout="responsive"  -%}
     </div>
-    <div id="img4" class="image full-width">
+    <div id="img4" class="image sm-col-12-12">
         {%- include components/amp-img/amp-img.html class="gallery-image"  src="Dustin-Childs-1.jpg" alt="Dustin Childs "  width="1065" height="700" layout="responsive"  -%}
     </div>
-    <div id="img5" class="image half-width first">
+    <div id="img5" class="image sm-col-6-12 first">
         {%- include components/amp-img/amp-img.html class="gallery-image"  src="instagram.jpg" alt="Dustin Childs "  width="500" height="755" layout="responsive"  -%}
     </div>
-    <div id="img6" class="image half-width">
+    <div id="img6" class="image sm-col-6-12">
         {%- include components/amp-img/amp-img.html class="gallery-image"  src="Dustin-Childs-2.jpg" alt="Dustin Childs "  width="500" height="755" layout="responsive"  -%}
     </div>
+    <div id="img7" class="image sm-col-2-5 gutter">
+        {%- include components/amp-img/amp-img.html class="gallery-image"  src="dustin-wendy.jpg" alt="Dustin Childs "  width="280" height="280" layout="responsive"  -%}
+    </div>
+    <div id="img8" class="image sm-col-3-5 gutter">
+        {%- include components/amp-img/amp-img.html class="gallery-image"  src="dustin-light.jpg" alt="Dustin Childs "  width="420" height="280" layout="responsive"  -%}
+    </div>
+{% comment %} 
+    <div id="img9" class="image sm-col-2-5">
+        {%- include components/amp-img/amp-img.html class="gallery-image"  src="dustin-dark.jpg" alt="Dustin Childs "  width="420" height="280" layout="responsive"  -%}
+    </div>
+     {% endcomment %}
 </div>
