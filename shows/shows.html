@@ -11,30 +11,54 @@ amp-fit-text: yes
 
 <div class="events">
     <h2>Current Events</h2>
-    <div class="event">
-        <amp-fit-text   height="150"
-        layout="fixed-height"
-        max-font-size="30">
-        <a href="http://www.theguildfreehouse.ca/">The Guild 1250 Wharf Street</a>
-        Happy hump day! Looking for a new way to celebrate?
-        Don't miss out on a chance to see Dustin perform and sing your hearts out!
-        Every Wednesday Night. 8:30 Signup!
-        </amp-fit-text>
-    </div>    
+    
+    {%- for gig in site.data.shows-current -%}
+        {%- capture url -%}
+            {{gig.locationHref}}
+        {%- endcapture location -%}
+        {%- capture location -%}
+            {{gig.location}}
+        {%- endcapture -%}
+        {%- capture date -%}
+            {{gig.date}} 
+        {%- endcapture -%}
+        {%- capture details -%}
+            {{gig.details}} 
+        {%- endcapture -%}
+
+
+        {%- include components/event/event.html linkHref=url linkText=location eventDetails=details date=date -%}
+
+     {%- endfor -%}
+
+
+   
+
 </div>
 
 <div class="one-edge-shadow"></div>
 
 <div class="past-events events">
     <h2>Past Events</h2>
-    <div class="event last">
-        <amp-fit-text   height="150"
-                        layout="fixed-height"
-                        max-font-size="30">
-        Come down, sing and dance while Listening to Dustin Childs plays all your favourite hits from 50s, 60s, 70s, 80s, 90s and 2000-2018 along!!
-        Parklands 20 year reunion night at The Dickens.
-        Saturday June the 16th!
-        For reservation or shuttle call (250)656-5042!
-        </amp-fit-text>
-    </div>
+    {%- for gig in site.data.shows-past -%}
+        {%- capture url -%}
+            {{gig.locationHref}}
+        {%- endcapture location -%}
+        {%- capture location -%}
+            {{gig.location}}
+        {%- endcapture -%}
+        {%- capture date -%}
+            {{gig.date}} 
+        {%- endcapture -%}
+        {%- capture details -%}
+            {{gig.details}} 
+        {%- endcapture -%}
+
+
+        {%- include components/event/event.html linkHref=url linkText=location eventDetails=details date=date -%}
+
+     {%- endfor -%}
+
 </div>
+
+

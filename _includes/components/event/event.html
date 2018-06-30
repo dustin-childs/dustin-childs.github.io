@@ -1,0 +1,22 @@
+<div class="event">
+    
+    <amp-fit-text   
+        height="150"
+        layout="fixed-height"
+        max-font-size="30">
+       
+        <a class="location" href="{{include.linkHref}}">{{include.linkText}}</a> 
+        <p>{{include.date}}</p>
+        {{include.eventDetails}}
+    
+    </amp-fit-text>
+
+</div> 
+
+
+{% comment %} 
+
+    usage:
+    {%- include events/event.html linkHref="" linkText="" eventDetails="" date="" -%}
+
+ {% endcomment %}
